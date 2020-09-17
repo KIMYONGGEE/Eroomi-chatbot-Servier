@@ -4,9 +4,7 @@ from flask import Flask, request, jsonify
 import sys
 app = Flask(__name__)
 
-
-
-@app.route('/test', methods=["GET"])
+@app.route('/test', methods=['GET'])
 def test():
     data = jsonify(
         version = 1.0,
@@ -155,4 +153,4 @@ def Message():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0') 
+    app.run(host='0.0.0.0')
