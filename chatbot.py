@@ -4,15 +4,9 @@ from flask import Flask, request, jsonify
 import sys
 app = Flask(__name__)
 
-@app.route('/test', methods=['GET'])
+@app.route('/test/')
 def test():
-    data = jsonify(
-        version = 1.0,
-        value_test=[
-            "abc", "efg"
-        ]
-    )
-    return data
+    return "data"
 
 @app.route('/message', methods=['POST'])
 def Message():
