@@ -6,12 +6,15 @@ app = Flask(__name__)
 
 
 
-@app.route('/keyboard')
-def Keyboard():
-    dataSend = {
-        "test"
-    }
-    return jsonify(dataSend)
+@app.route('/test', methods=["GET"])
+def test():
+    data = jsonify(
+        version = 1.0,
+        value_test=[
+            "abc", "efg"
+        ]
+    )
+    return data
 
 @app.route('/message', methods=['POST'])
 def Message():
