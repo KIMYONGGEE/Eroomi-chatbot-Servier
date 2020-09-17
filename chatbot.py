@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/keyboard')
 def Keyboard():
     dataSend = {
+        "test"
     }
     return jsonify(dataSend)
 
